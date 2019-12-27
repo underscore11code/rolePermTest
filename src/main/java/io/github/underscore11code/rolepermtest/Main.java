@@ -20,9 +20,9 @@ public class Main {
             server.getAllowedPermissions(api.getYourself()).forEach(permissionType -> System.out.println("  " + permissionType.name()));
             for (ServerTextChannel channel : server.getTextChannels()) {
                 System.out.println("  TC: " + channel.getName() + "(" + channel.getIdAsString() + ")");
-                channel.getEffectiveAllowedPermissions(api.getYourself()).forEach(permissionType -> System.out.println("    " + permissionType.name() + ", ALLOWED"));
-                channel.getEffectiveDeniedPermissions(api.getYourself()).forEach(permissionType -> System.out.println("    " + permissionType.name() + ", DENIED"));
+                channel.getEffectiveAllowedPermissions(api.getYourself()).forEach(permissionType -> System.out.println("    " + permissionType.name()));
             }
         }
+        System.exit(0);
     }
 }
